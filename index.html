@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pixel Art Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Pixel Art Generator</h1>
+    </header>
+    <main>
+        <section id="upload-section">
+            <h2>Upload Image</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="uploadBtn">Upload</button>
+        </section>
+        <section id="options-section">
+            <h2>Pixel Art Options</h2>
+            <div class="option">
+                <label for="pixelSize">Pixel Size:</label>
+                <input type="range" id="pixelSize" min="1" max="50" value="10">
+                <span id="pixelSizeValue">10</span>
+            </div>
+            <div class="option">
+                <label for="colorReduction">Color Reduction:</label>
+                <input type="range" id="colorReduction" min="1" max="256" value="32">
+                <span id="colorReductionValue">32</span>
+            </div>
+            <div class="option">
+                <label for="dithering">Dithering:</label>
+                <select id="dithering">
+                    <option value="none">None</option>
+                    <option value="floydSteinberg">Floyd-Steinberg</option>
+                    <option value="ordered">Ordered</option>
+                </select>
+            </div>
+            <div class="option">
+                <label for="brightness">Brightness:</label>
+                <input type="range" id="brightness" min="-100" max="100" value="0">
+                <span id="brightnessValue">0</span>
+            </div>
+            <div class="option">
+                <label for="contrast">Contrast:</label>
+                <input type="range" id="contrast" min="-100" max="100" value="0">
+                <span id="contrastValue">0</span>
+            </div>
+            <button id="generateBtn">Generate Pixel Art</button>
+        </section>
+        <section id="preview-section">
+            <h2>Preview</h2>
+            <div id="previewContainer">
+                <img id="originalImage" alt="Original Image">
+                <canvas id="pixelArtCanvas"></canvas>
+            </div>
+        </section>
+        <section id="download-section">
+            <h2>Download</h2>
+            <button id="downloadBtn">Download Pixel Art</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Advanced Pixel Art Generator. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
